@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+# vim: set fileencoding=utf-8 :
 
 from requests_oauthlib import OAuth1
 import os
