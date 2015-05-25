@@ -3,6 +3,7 @@
 from requests_oauthlib import OAuth1
 from restmapper.restmapper import RestMapper
 import os
+import random
 
 APP_KEY = os.environ['APP_KEY']
 APP_SECRET = os.environ['APP_SECRET']
@@ -13,5 +14,7 @@ Twitter = RestMapper("https://api.twitter.com/1.1/", url_transformer=lambda url:
 auth = OAuth1(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 twitter = Twitter(auth=auth)
 
-response = twitter.POST.account.update_profile(description=".", parse_response=False)
+emojis = u"""☁ ☺ ☹ ✊ ✋ ☝ ✌ ⚡ ✨ ⭕ ❌ ⭐ ❕ ❔ ❗ ❓ ❄ ☀ ⛅ ☔ ⛄ ☎ ➿ ✂ ⚽ ⚾ ⛳ ♠ ♥ ♣ ♦ ☕ ♤ ♡ ♢ ♧ ⏰ ⏳ ⌛ ⌚ ♨ ✏ ✒ ✉ ⚓ ⛪ ⛺ ⛲ ⛵ ✈ ⛽ ⚠ ⛔  ⬆ ⬇ ⬅ ➡ ↗ ↖ ↘ ↙ ◀ ▶ ⏪ ⏩ ♿ ㊙ ㊗ ✳ ✴ ♈ ♉ ♊ ♋ ♌ ♍ ♎ ♏ ♐ ♑ ♒ ♓ ⛎ ⭕ ❌ © ® ™ ⏫ ⏬ ↕ ↔ ↩ ↪ ⤴ ⤵ ℹ ❎ Ⓜ ⚫ ⚪ ◼ ◻ ▪ ▫ ✖ ➕ ➖ ➗ ➰ 〰 ♻ ☢ ☣ ☠ ☤ ⚕ ⚚ † ☯ ⚖ ☮ ⚘ ⚔ ☭ ⚒ ⚛ ⚜ ☥ ✠ ✙ ✞ ✟ ✧ ⋆ ★ ☆ ✪ ✫ ✬ ✭ ✮ ✯ ✰ ✡ ☫ ☬ ☸ ✵ ❂ ⚘ ❀ ❃ ❁ ✼ ♫ ♪ ☃ ❅ ❆ ☂ ❦ ♕ ♛ ♔ ♖ ♜ ☾ → ⇒ ⟹ ⇨ ⇰ ➩ ➪ ➫ ➬ ➭ ➮ ➯ ➲ ➳ ➵ ➸ ➻ ➺ ➼ ➽ ☜ ☟ ➹ ➷ ↶ ↷ ✆ ⌘ ⎋ ⏎ ⏏ ⎈ ⎌ ⍟ ❥ ツ ღ ☻"""
+
+response = twitter.POST.account.update_profile(description=random.choice(emojis), parse_response=False)
 
