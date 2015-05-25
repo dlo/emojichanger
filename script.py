@@ -13,5 +13,5 @@ Twitter = RestMapper("https://api.twitter.com/1.1/", url_transformer=lambda url:
 auth = OAuth1(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 twitter = Twitter(auth=auth)
 
-response = twitter.POST.account.update_profile(description="☁", parse_response=False)
+response = twitter.POST.account.update_profile(description=".", parse_response=False)
 
