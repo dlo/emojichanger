@@ -14,7 +14,7 @@ Twitter = RestMapper("https://api.twitter.com/1.1/", url_transformer=lambda url:
 auth = OAuth1(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 twitter = Twitter(auth=auth)
 
-emojis = u"""☁ ☺ ☹ ✊ ✋ ☝ ✌ ⚡ ✨ ⭕ ❌ ⭐ ❕ ❔ ❗ ❓ ❄ ☀ ⛅ ☔ ⛄ ☎ ➿ ✂ ⚽ ⚾ ⛳ ♠ ♥ ♣ ♦ ☕ ♤ ♡ ♢ ♧ ⏰ ⏳ ⌛ ⌚ ♨ ✏ ✒ ✉ ⚓ ⛪ ⛺ ⛲ ⛵ ✈ ⛽ ⚠ ⛔  ⬆ ⬇ ⬅ ➡ ↗ ↖ ↘ ↙ ◀ ▶ ⏪ ⏩ ♿ ㊙ ㊗ ✳ ✴ ♈ ♉ ♊ ♋ ♌ ♍ ♎ ♏ ♐ ♑ ♒ ♓ ⛎ ⭕ ❌ © ® ™ ⏫ ⏬ ↕ ↔ ↩ ↪ ⤴ ⤵ ℹ ❎ Ⓜ ⚫ ⚪ ◼ ◻ ▪ ▫ ✖ ➕ ➖ ➗ ➰ 〰 ♻ ☢ ☣ ☠ ☤ ⚕ ⚚ † ☯ ⚖ ☮ ⚘ ⚔ ☭ ⚒ ⚛ ⚜ ☥ ✠ ✙ ✞ ✟ ✧ ⋆ ★ ☆ ✪ ✫ ✬ ✭ ✮ ✯ ✰ ✡ ☫ ☬ ☸ ✵ ❂ ⚘ ❀ ❃ ❁ ✼ ♫ ♪ ☃ ❅ ❆ ☂ ❦ ♕ ♛ ♔ ♖ ♜ ☾ → ⇒ ⟹ ⇨ ⇰ ➩ ➪ ➫ ➬ ➭ ➮ ➯ ➲ ➳ ➵ ➸ ➻ ➺ ➼ ➽ ☜ ☟ ➹ ➷ ↶ ↷ ✆ ⌘ ⎋ ⏎ ⏏ ⎈ ⎌ ⍟ ❥ ツ ღ ☻"""
+emojis=u"""☁☺☹✊✋☝✌⚡✨⭕❌⭐❕❔❗❓❄☀⛅☔⛄☎➿✂⚽⚾⛳♠♥♣♦☕♤♡♢♧⏰⏳⌛⌚♨✏✒✉⚓⛪⛺⛲⛵✈⛽⚠⛔⬆⬇⬅➡↗↖↘↙◀▶⏪⏩♿㊙㊗✳✴♈♉♊♋♌♍♎♏♐♑♒♓⛎⭕❌©®™⏫⏬↕↔↩↪⤴⤵ℹ❎Ⓜ⚫⚪◼◻▪▫✖➕➖➗➰〰♻☢☣☠☤⚕⚚†☯⚖☮⚘⚔☭⚒⚛⚜☥✠✙✞✟✧⋆★☆✪✫✬✭✮✯✰✡☫☬☸✵❂⚘❀❃❁✼♫♪☃❅❆☂❦♕♛♔♖♜☾→⇒⟹⇨⇰➩➪➫➬➭➮➯➲➳➵➸➻➺➼➽☜☟➹➷↶↷✆⌘⎋⏎⏏⎈⎌⍟❥ツღ☻"""
 
 response = twitter.POST.account.update_profile(description=random.choice(emojis), parse_response=False)
 
