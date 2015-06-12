@@ -1,6 +1,13 @@
 emojichanger
 ============
 
+Setting up deployments
+----------------------
+
+```
+heroku git:remote -a twitter-profile-updater
+```
+
 ```
 heroku create
 git push heroku master
