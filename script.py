@@ -16,5 +16,5 @@ twitter = Twitter(auth=auth)
 
 emojis=u"""☁☺☹✊✋☝✌⚡✨⭕❌⭐❕❔❗❓❄☀⛅☔⛄☎➿✂⚽⚾⛳♠♥♣♦☕♤♡♢♧⏰⏳⌛⌚♨✏✒✉⚓⛪⛺⛲⛵✈⛽⚠⛔⬆⬇⬅➡↗↖↘↙◀▶⏪⏩♿㊙㊗✳✴♈♉♊♋♌♍♎♏♐♑♒♓⛎⭕❌©®™⏫⏬↕↔↩↪⤴⤵ℹ❎Ⓜ⚫⚪◼◻▪▫✖➕➖➗➰〰♻☢☣☠☤⚕⚚†☯⚖☮⚘⚔☭⚒⚛⚜☥✠✙✞✟✧⋆★☆✪✫✬✭✮✯✰✡☫☬☸✵❂⚘❀❃❁✼♫♪☃❅❆☂❦♕♛♔♖♜☾→⇒⟹⇨⇰➩➪➫➬➭➮➯➲➳➵➸➻➺➼➽☜☟➹➷↶↷✆⌘⎋⏎⏏⎈⎌⍟❥ツღ☻"""
 
-response = twitter.POST.account.update_profile(description=u"Pressing buttons and breaking things. Follow @dwlz_ for higher tweet bandwidth. EOTD: {}.".format(random.choice(emojis)), parse_response=False)
+response = twitter.POST.account.update_profile(description=u"Pressing buttons and breaking things @lionheartsw. Follow @dwlz_ if you want the unfiltered stream. EOTD: {}".format(random.choice(emojis)), parse_response=False)
 
