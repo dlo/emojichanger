@@ -18,6 +18,12 @@ heroku config:set OAUTH_TOKEN_SECRET="YOUR_OAUTH_TOKEN_SECRET"
 heroku addons:create scheduler:standard
 ```
 
+Optionally, you can also provide a bio to prepend the random Emoji.
+
+```
+heroku config:set BIO_FORMAT="Linguist. Philosopher. Millenial."
+```
+
 Set up a recurring task for every X minutes that calls `python script.py`.
 
 ...and you're done!
