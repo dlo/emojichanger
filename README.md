@@ -24,6 +24,4 @@ Optionally, you can also provide a bio to prepend the random Emoji.
 heroku config:set BIO_FORMAT="Linguist. Philosopher. Millenial."
 ```
 
-Set up a recurring task for every X minutes that calls `python script.py`.
-
-...and you're done!
+Finally, set up a recurring task that calls `python script.py`.
