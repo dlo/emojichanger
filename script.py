@@ -23,7 +23,7 @@ random_emoji = unicode(random.choice(emojis))
 if BIO_FORMAT is None:
     description = u"{}".format(random_emoji)
 else:
-    description = BIO_FORMAT + " " + random_emoji
+    description = BIO_FORMAT + " " + unicode(random_emoji)
 
 response = twitter.POST.account.update_profile(description=description, parse_response=False)
 
