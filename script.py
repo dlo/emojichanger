@@ -15,6 +15,8 @@ Twitter = RestMapper("https://api.twitter.com/1.1/", url_transformer=lambda url:
 auth = OAuth1(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 twitter = Twitter(auth=auth)
 
+print BIO_FORMAT
+
 emojis=u"""☁☺☹✊✋☝✌⚡✨⭕❌⭐❕❔❗❓❄☀⛅☔⛄☎➿✂⚽⚾⛳♠♥♣♦☕♤♡♢♧⏰⏳⌛⌚♨✏✒✉⚓⛪⛺⛲⛵✈⛽⚠⛔⬆⬇⬅➡↗↖↘↙◀▶⏪⏩♿㊙㊗✳✴♈♉♊♋♌♍♎♏♐♑♒♓⛎⭕❌©®™⏫⏬↕↔↩↪⤴⤵ℹ❎Ⓜ⚫⚪◼◻▪▫✖➕➖➗➰〰♻☢☣☠☤⚕⚚†☯⚖☮⚘⚔☭⚒⚛⚜☥✠✙✞✟✧⋆★☆✪✫✬✭✮✯✰✡☫☬☸✵❂⚘❀❃❁✼♫♪☃❅❆☂❦♕♛♔♖♜☾→⇒⟹⇨⇰➩➪➫➬➭➮➯➲➳➵➸➻➺➼➽☜☟➹➷↶↷✆⌘⎋⏎⏏⎈⎌⍟❥ツღ☻"""
 
 random_emoji = unicode(random.choice(emojis))
